@@ -1,6 +1,13 @@
 from stats import count_words, count_characteres, get_book_text, dict_to_list
+import sys
 
-book_path = "books/frankenstein.txt"
+book_path = ""
+
+try:
+	book_path = sys.argv[1]
+except IndexError:
+	print("Usage: python3 main.py <path_to_book>")
+	sys.exit(1)
 
 def main():
 	print("============ BOOKBOT ============")
