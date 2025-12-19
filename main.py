@@ -14,6 +14,6 @@ def count_words(path):
     return word_count
 
 def main():
-	print(count_words("books/frankenstein.txt"))
+	print(f"Found {count_words("books/frankenstein.txt")} total words")
 
 main()
