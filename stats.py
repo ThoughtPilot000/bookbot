@@ -40,7 +40,8 @@ def sort_on(items):
 def dict_to_list(idict):
     list_of_dicts = []
     for i in idict:
-        list.append({"char": i, "num": idict[i]})
-        print(list_of_dicts)
+        list_of_dicts.append({"char": i, "num": idict[i]})
+
+    sorted_list = list_of_dicts.sort(reverse=True, key=sort_on)
 
     return list_of_dicts
