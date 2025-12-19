@@ -29,3 +29,18 @@ def count_characteres(string):
             charactere_count_dict[i] = 1
 
     return charactere_count_dict
+
+#report writing#
+
+#sort key
+
+def sort_on(items):
+    return items["num"]
+
+def dict_to_list(idict):
+    list_of_dicts = []
+    for i in idict:
+        list.append({"char": i, "num": idict[i]})
+        print(list_of_dicts)
+
+    return list_of_dicts
