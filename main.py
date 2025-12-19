@@ -3,7 +3,17 @@ def get_book_text(path):
 		contents = f.read()
 	return contents
 
+def cut_words(path):
+    return get_book_text(path).split()
+
+def count_words(path):
+    word_count = 0
+    for i in cut_words(path):
+        word_count += 1
+    
+    return word_count
+
 def main():
-	print(get_book_text("books/frankenstein.txt"))
+	print(count_words("books/frankenstein.txt"))
 
 main()
