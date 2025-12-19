@@ -29,3 +29,21 @@ def count_characteres(string):
             charactere_count_dict[i] = 1
 
     return charactere_count_dict
+
+#report writing#
+
+#sort key
+
+def sort_on(items):
+    return items["num"]
+
+def dict_to_list(idict):
+    list_of_dicts = []
+    for i in idict:
+        list_of_dicts.append({"char": i, "num": idict[i]})
+
+    sorted_list = list_of_dicts.sort(reverse=True, key=sort_on)
+
+    return list_of_dicts
+
+print(dict_to_list(count_characteres(get_book_text("books/frankenstein.txt"))))
